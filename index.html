@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <style>
+        body {
+            background-color: #101010;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+
+        .container {
+            display: flex;
+            gap: 50px;
+        }
+
+        #cart-item {
+            background-color: #636262;
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .cart-items {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            background-color: #000000;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background-color: orangered;
+            color: white;
+            font-size: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin-top: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .second-head {
+            text-align: center;
+            font-weight: 700;
+            color: gold;
+            font-size: 25px;
+            margin: 20px 0;
+        }
+
+        #select-items {
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+            width: 500px;
+            background-color: #636262;
+            padding: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #select-item {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #total-price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #cart-item,
+            #select-items {
+                width: 90%;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .second-head {
+                font-size: 20px;
+            }
+
+            #total-price {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add to cart</h1>
+
+    <div class="container">
+        <div id="cart-item">
+
+        </div>
+
+        <div>
+            <h3 class="second-head">Your Select Items</h3>
+            <div id="select-items">
+                <p id="select-item-empty">No selected Item here</p>
+            </div>
+            <div id="select-item">
+                <span id="total-price">Total Price : 0.00 </span>
+            </div>
+            <button class="btn" id="checkoutBtn">
+                Checkout
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
